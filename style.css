@@ -23,10 +23,6 @@ section{
     width: 50%;
     padding-left: 5%;
     text-align: center;
-    
-}
-.half-width image{
-    width: 80%;
 }
 .half-width img{
     width: 556.01px;
@@ -46,6 +42,10 @@ section{
     display: inline-block;
     position: absolute;
     left: 6%;
+    transition: width 5s;
+}
+.link-button:hover{
+    width: 250px;
 }
 
 /* start player info style */
@@ -60,14 +60,54 @@ section{
     left: 180px;
     top: 747px;
     background: #FFFFFF;
-    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+   
 }
 .player .player-banner img{
-    position: static;
+    /* position: static; */
     width: 300px;
     height: 256px;
     
 }
 .player{
      border: 20px solid whitesmoke;
+     box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+     padding: 1px;
+}
+
+/* footer */
+
+.footer{
+    position: absolute;
+    top: 1900px;
+    /* text-align: center; */
+}
+.footer-logo img{
+   position: static;
+   width: 483.87px;
+   height: 110px;
+}
+footer p{
+    text-align: center;
+}
+.icon{
+    text-align: center;
+}
+.icon i{
+    margin-right: 7px;
+}
+
+
+/* Media Queries */
+
+/* Mobile Devices */
+@media only screen and (max-width:688px) {
+    .all-player, .banner{
+        width: 100%;
+    }
+    .banner, .player-banner, .player-info{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .all-player, .player-info{
+        flex-direction: column;
+    }
 }
