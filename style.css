@@ -101,13 +101,27 @@ footer p{
 
 /* Mobile Devices */
 @media only screen and (max-width:688px) {
-    .all-player, .banner{
+    .banner, .all-player, .footer {
         width: 100%;
     }
-    .banner, .player-banner, .player-info{
+    .banner, .all-player, .footer{
         grid-template-columns: repeat(1,1fr);
     }
-    .all-player, .player-info{
+    .banner, .all-player, .footer{
         flex-direction: column;
+    }
+}
+ 
+/* tablet devices */
+
+@media only screen and (min-width: 688px) and (max-width:992px) {
+    .banner, .all-player, .footer{
+        width: 100%;
+    }
+    .banner, .all-player, .footer{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .banner{
+        grid-template-columns: repeat(1,1fr);
     }
 }
